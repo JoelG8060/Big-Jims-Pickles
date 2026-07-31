@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Big Jims Pickels | Request Custom Pickles</title>
+    <meta
+      name="description"
+      content="Big Jims Pickels is a local pickle making and jaring company with custom request and admin review tools."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="backdrop backdrop-a"></div>
+    <div class="backdrop backdrop-b"></div>
+
+    <div class="shell">
+      <header class="topbar">
+        <div class="brand">
+          <img
+            class="brand-mark"
+            src="./assets/brand/big-jims-logo.png"
+            alt="Big Jim's Pickels logo"
+          />
+          <div>
+            <p class="eyebrow">Crisp. Clean. Classic.</p>
+            <h1>Big Jims Pickels</h1>
+          </div>
+        </div>
+
+        <nav class="topnav" aria-label="Primary">
+          <a href="#request" class="navlink">Request Pickles</a>
+          <a href="#ranch-request" class="navlink">Request Ranch</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero panel">
+          <div class="hero-copy">
+            <p class="hero-kicker">Made the old-fashioned way</p>
+            <h2>
+              Big Flavor.<br />
+              Big Crunch.<br />
+              Big Jim's.
+            </h2>
+            <p class="hero-text">
+              Big Jims Pickels gets a brand-first site that feels like the logo: warm cream, deep
+              green, and a spicy red accent. The request form and admin area are already wired in.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#request" class="button button-primary">Send a request</a>
+            </div>
+
+            <div class="brand-chips" aria-label="Brand tags">
+              <span class="status-pill">Crisp</span>
+              <span class="status-pill">Clean</span>
+              <span class="status-pill status-pill-spice">Spicy</span>
+            </div>
+
+            <dl class="hero-stats" aria-label="Request summary">
+              <div>
+                <dt>Total requests</dt>
+                <dd id="requestCount">0</dd>
+              </div>
+              <div>
+                <dt>Pickles</dt>
+                <dd id="pickleCount">0</dd>
+              </div>
+              <div>
+                <dt>Ranch</dt>
+                <dd id="ranchCount">0</dd>
+              </div>
+            </dl>
+            <p class="hero-footnote">Requests stay local for this draft until we connect shared storage.</p>
+          </div>
+
+          <aside class="hero-card">
+            <div class="hero-card-top">
+              <span class="status-pill">Request intake</span>
+              <span class="status-pill status-pill-muted">Admin review</span>
+            </div>
+
+            <figure class="hero-logo-figure">
+              <img
+                class="hero-logo-image"
+                src="./assets/brand/big-jims-hero-duo.png"
+                alt="Big Jim's Pickels classic and spicy logo artwork side by side"
+              />
+              <figcaption>
+                The classic and spicy brand marks stay together in the old-school hero treatment.
+              </figcaption>
+            </figure>
+
+            <div class="feature-stack">
+              <article class="feature-card">
+                <h3>Classic dill energy</h3>
+                <p>Deep greens, warm cream, and a hand-painted badge feel from the logo.</p>
+              </article>
+              <article class="feature-card">
+                <h3>Spicy accent mode</h3>
+                <p>The red version of the mark gives us an easy way to highlight featured batches.</p>
+              </article>
+            </div>
+          </aside>
+        </section>
+
+        <section class="panel grid-2" id="request">
+          <div class="section-heading">
+            <p class="eyebrow">Request form</p>
+            <h2>Tell Big Jims what you want made</h2>
+            <p>
+              This is the front-end form customers will use before we connect a real backend.
+            </p>
+
+            <figure class="request-logo-figure">
+              <img
+                class="request-logo-image"
+                src="./assets/brand/big-jims-logo.png"
+                alt="Big Jim's Pickels logo artwork"
+              />
+              <figcaption>
+                The pickle request section uses the regular Big Jims logo for a cleaner classic look.
+              </figcaption>
+            </figure>
+          </div>
+
+          <form class="form-card" id="requestForm">
+            <div class="field-grid">
+              <label>
+                Full name
+                <input name="name" type="text" placeholder="Pickle Pete" required />
+              </label>
+              <label>
+                Contact info
+                <input name="contact" type="text" placeholder="Email or phone" required />
+              </label>
+            </div>
+
+            <div class="field-grid">
+              <label>
+                Pickle style
+                <select name="style" required>
+                  <option value="">Choose one</option>
+                  <option>Dill spears</option>
+                  <option>Sweet chips</option>
+                  <option>Spicy slices</option>
+                  <option>Garlic whole spears</option>
+                  <option>Custom batch</option>
+                </select>
+              </label>
+              <label>
+                Quantity
+                <select name="quantity" required>
+                  <option value="">Choose one</option>
+                  <option>1 jar</option>
+                  <option>2 jars</option>
+                  <option>4 jars</option>
+                  <option>6 jars</option>
+                  <option>Bulk order</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              Notes
+              <textarea
+                name="notes"
+                rows="5"
+                placeholder="Flavor preferences, delivery needs, jar size, or anything special."
+              ></textarea>
+            </label>
+
+            <button class="button button-primary button-wide" type="submit">Save request</button>
+            <p class="form-note" id="requestMessage" role="status" aria-live="polite">
+              Requests are stored in this browser until the site gets a shared database.
+            </p>
+          </form>
+        </section>
+
+        <section class="panel quality-panel" id="quality">
+          <div class="quality-grid">
+            <div class="section-heading quality-copy">
+              <p class="eyebrow">Quality first</p>
+              <h2>Small batches, high standards, and a finish you can hear.</h2>
+              <p>
+                Big Jims treats every jar like it matters because it does. The pickles are made in
+                house from the first trim to the final lid check, with hands-on attention at each
+                step. That keeps the brine bright, the texture crisp, and the flavor consistent
+                from one batch to the next.
+              </p>
+              <p>
+                We do not chase volume at the expense of character. Instead, the team focuses on
+                clean ingredients, careful timing, and a process that lets the cucumbers stay
+                lively instead of soft. The result is a jar that looks polished, tastes balanced,
+                and delivers the kind of crunch people remember.
+              </p>
+              <p>
+                Before a batch goes out, it gets a final taste test from KJ, our most respected
+                pickle enthusiast, who checks for snap, seasoning, and that unmistakable
+                fresh-made finish. If it passes KJ, it earns the Big Jims seal of approval.
+              </p>
+              <div class="quality-callout">
+                <strong>Tested by KJ</strong>
+                <span>our most respected pickle enthusiast, trusted to give the final crunchy seal of approval.</span>
+              </div>
+              <ul class="quality-list">
+                <li>Hand-packed one jar at a time for a consistent fill and clean presentation.</li>
+                <li>Balanced brine and seasoning for a bold but dependable bite.</li>
+                <li>KJ signs off on the final crunch before a batch gets approved.</li>
+              </ul>
+            </div>
+
+            <div class="quality-showcase">
+              <div
+                class="slideshow"
+                id="qualitySlideshow"
+                aria-label="Big Jims pickle quality slideshow"
+              >
+                <div class="slideshow-frame">
+                  <div class="slideshow-viewport">
+                    <img
+                      class="slideshow-image is-active"
+                      id="qualitySlideImage"
+                      src="./assets/quality-slides/slide-6.png"
+                      alt="Big Jims pickle product photography"
+                    />
+                  </div>
+
+                  <div class="slideshow-caption">
+                    <p class="slideshow-kicker" id="qualitySlideKicker">Classic batch</p>
+                    <h3 id="qualitySlideTitle">The jar lineup that starts the shelf story</h3>
+                    <p id="qualitySlideCopy">
+                      Every angle in the line-up shows off the labels, the glass finish, and the
+                      handcrafted look that Big Jims is built on.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="slideshow-controls">
+                  <button class="slideshow-button" id="qualityPrev" type="button">Prev</button>
+                  <div class="slideshow-dots" id="qualitySlideDots" aria-label="Slide selection"></div>
+                  <button class="slideshow-button" id="qualityNext" type="button">Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel grid-2 ranch-panel" id="ranch-request">
+          <div class="section-heading ranch-heading">
+            <p class="eyebrow eyebrow-ranch">Ranch line</p>
+            <h2>Cool, creamy, ridiculously delicious.</h2>
+            <p>
+              Big Jim’s ranch gets the same request flow, but with a blue-and-cream identity pulled
+              from the ranch badge artwork.
+            </p>
+
+            <div class="brand-chips brand-chips-ranch" aria-label="Ranch brand tags">
+              <span class="status-pill status-pill-ranch">Buttermilk</span>
+              <span class="status-pill status-pill-ranch">Creamy</span>
+              <span class="status-pill status-pill-ranch status-pill-ranch-accent">Homemade</span>
+            </div>
+
+            <figure class="ranch-logo-figure">
+              <img
+                class="ranch-logo-image"
+                src="./assets/brand/big-jims-ranch-logo.png"
+                alt="Big Jim's Buttermilk Ranch logo artwork"
+              />
+              <figcaption>
+                The ranch section uses the supplied blue and cream badge to set a different mood.
+              </figcaption>
+            </figure>
+          </div>
+
+          <form class="form-card ranch-form" id="ranchRequestForm">
+            <div class="field-grid">
+              <label>
+                Full name
+                <input name="name" type="text" placeholder="Ranch Ray" required />
+              </label>
+              <label>
+                Contact info
+                <input name="contact" type="text" placeholder="Email or phone" required />
+              </label>
+            </div>
+
+            <div class="field-grid">
+              <label>
+                Ranch style
+                <select name="style" required>
+                  <option value="">Choose one</option>
+                  <option>Classic buttermilk</option>
+                  <option>Garlic ranch</option>
+                  <option>Herb ranch</option>
+                  <option>Spicy ranch</option>
+                  <option>Custom batch</option>
+                </select>
+              </label>
+              <label>
+                Quantity
+                <select name="quantity" required>
+                  <option value="">Choose one</option>
+                  <option>1 jar</option>
+                  <option>2 jars</option>
+                  <option>4 jars</option>
+                  <option>6 jars</option>
+                  <option>Bulk order</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              Notes
+              <textarea
+                name="notes"
+                rows="5"
+                placeholder="Creaminess level, herb notes, jar size, or anything special."
+              ></textarea>
+            </label>
+
+            <button class="button button-primary button-wide button-ranch" type="submit">
+              Save ranch request
+            </button>
+            <p class="form-note form-note-ranch" id="ranchRequestMessage" role="status" aria-live="polite">
+              Ranch requests are stored in this browser until the site gets a shared database.
+            </p>
+          </form>
+        </section>
+
+        <section class="panel admin-panel" id="admin">
+          <div class="section-heading">
+            <p class="eyebrow">Admin access</p>
+            <h2>Log in to review pickle and ranch requests</h2>
+            <p>For this draft, the admin area uses a simple local login so we can prove the workflow.</p>
+          </div>
+
+          <div id="adminContent"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
